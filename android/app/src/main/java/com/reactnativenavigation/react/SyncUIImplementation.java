@@ -15,7 +15,6 @@ import com.facebook.react.uimanager.common.SizeMonitoringFrameLayout;
 import com.facebook.react.uimanager.events.EventDispatcher;
 
 import java.util.List;
-
 @SuppressWarnings("WeakerAccess")
 public class SyncUiImplementation extends UIImplementation {
     private static final Object lock = new Object();
