@@ -16,26 +16,26 @@ import com.facebook.react.uimanager.events.EventDispatcher;
 
 import java.util.List;
 @SuppressWarnings("WeakerAccess")
-public class SyncUiImplementation extends UIImplementation {
+public class SyncUIImplementation extends UIImplementation {
     private static final Object lock = new Object();
 
     public static class Provider extends UIImplementationProvider {
         @Override
         public UIImplementation createUIImplementation(ReactApplicationContext reactContext, List<ViewManager> viewManagerList, EventDispatcher eventDispatcher, int minTimeLeftInFrameForNonBatchedOperationMs) {
-            return new SyncUiImplementation(reactContext, viewManagerList, eventDispatcher, minTimeLeftInFrameForNonBatchedOperationMs);
+            return new SyncUIImplementation(reactContext, viewManagerList, eventDispatcher, minTimeLeftInFrameForNonBatchedOperationMs);
         }
 
         @Override
         public UIImplementation createUIImplementation(ReactApplicationContext reactContext, UIManagerModule.ViewManagerResolver viewManagerResolver, EventDispatcher eventDispatcher, int minTimeLeftInFrameForNonBatchedOperationMs) {
-            return new SyncUiImplementation(reactContext, viewManagerResolver, eventDispatcher, minTimeLeftInFrameForNonBatchedOperationMs);
+            return new SyncUIImplementation(reactContext, viewManagerResolver, eventDispatcher, minTimeLeftInFrameForNonBatchedOperationMs);
         }
     }
 
-    public SyncUiImplementation(ReactApplicationContext reactContext, List<ViewManager> viewManagerList, EventDispatcher eventDispatcher, int minTimeLeftInFrameForNonBatchedOperationMs) {
+    public SyncUIImplementation(ReactApplicationContext reactContext, List<ViewManager> viewManagerList, EventDispatcher eventDispatcher, int minTimeLeftInFrameForNonBatchedOperationMs) {
         super(reactContext, viewManagerList, eventDispatcher, minTimeLeftInFrameForNonBatchedOperationMs);
     }
 
-    public SyncUiImplementation(ReactApplicationContext reactContext, UIManagerModule.ViewManagerResolver viewManagerResolver, EventDispatcher eventDispatcher, int minTimeLeftInFrameForNonBatchedOperationMs) {
+    public SyncUIImplementation(ReactApplicationContext reactContext, UIManagerModule.ViewManagerResolver viewManagerResolver, EventDispatcher eventDispatcher, int minTimeLeftInFrameForNonBatchedOperationMs) {
         super(reactContext, viewManagerResolver, eventDispatcher, minTimeLeftInFrameForNonBatchedOperationMs);
     }
 
